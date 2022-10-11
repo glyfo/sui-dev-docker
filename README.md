@@ -1,5 +1,5 @@
 
-# Command Line Tool for Sui .
+# Glyfo Command Line Tool for Sui .
 
 glyfclt handler communication with suiX Container to support Web3 Development.
 
