@@ -68,6 +68,8 @@ $ glyclt help
 
 ## Reference
 
-[Sui Docs] (https://sui.io/)
+[Sui Docs](https://sui.io/)
 
-[Docker] (https://docker.com)
+[Move Language Docs](https://move-book.com))
+
+[Docker](https://docker.com)
