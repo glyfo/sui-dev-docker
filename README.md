@@ -11,10 +11,6 @@ glyfclt handler communication with suiX Container to support Web3 Development.
 + wget
 + MacOS ( x86_64 )
 
-## Glyfo Command Line Tool Diagram 
-
-![Detail](./glyclt.png)
-
 ## 1- Install 
 
 ```console
