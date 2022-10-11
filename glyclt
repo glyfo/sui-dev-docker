@@ -5,7 +5,7 @@
 # Apache License, Version 2.0. See LICENSE file in the project root for details.    #
 # name    : Command Line Tool to deploy Smart Contract on Sui                       #
 # website : glyfo.com                                                               #
-# support : hello@glyfo.com                                                         #
+# support : support@glyfo.com                                                         #
 #####################################################################################
 
 # ---------------------- TIPS -------------------------------
@@ -31,13 +31,14 @@ echo_help () {
 }
 
 echo_setup () {
-echo "${b}+ setup${n}       : Handler Sui Node 
-     + status   : Validate if suiX is Running on Enviroment 
-     + build    : Deploy & Install Enviroment to Develop using Sui Blockchain 
-     + login    : login into the Container 
-     + reset    : Restart Container ( Stop & Start ) 
-     + stack    : Show All Stack Version 
-     + delete   : Delete Container" 
+echo "${b}+ setup${n}       : manage sui container 
+     + status   : validate if suiX is running on enviroment 
+     + build    : deploy & install enviroment to develop using sui blockchain 
+     + login    : login into container 
+     + reset    : restart container ( stop & start ) 
+     + info     : show version about software stack 
+     + backup   : export suiX container
+     + delete   : delete container" 
 }
 
 ## ----------------------  BEGIN SETUP --------------------------
@@ -73,6 +74,10 @@ EOF
     docker exec -it suiX /bin/bash
     exit
 ;;
+   backup)
+    docker export suiX > suiX.tar
+    exit
+;;
    reset)
     echo "Stop Container"
     docker stop  $(docker ps -a |grep suiX |awk '{ print $1 }' )
@@ -86,7 +91,7 @@ EOF
     docker rm suiX
     exit
 ;;
-   stack)
+   info)
     docker exec -i suiX /bin/bash -s <<EOF
     export PATH=$_path
     echo '----------------------- Release  --------------------'
