@@ -19,29 +19,28 @@ _path="/usr/local/sui/bin:/usr/local/cargo/bin:/bin:/usr/bin"
 b=$(tput bold)
 n=$(tput sgr0)
 
-## ----------------------  MENU ---------------------
+## ----------------------  UTIL FUNCTION ---------------------
 
 
 echo_help () {
    echo "${n} Usage: ${b} glyclt ${n}"
    echo_setup 
    echo ""
-   echo "v0.1.1"
+   echo "v0.2.1"
    exit
 }
 
 echo_setup () {
 echo "${b}+ setup${n}       : Handler Sui Node 
-     + scratch   : Deploy & Compile Enviroment to Develop on Sui Blockchain 
-     + dockerhub : Deploy & Install Enviroment to Develop on Sui Blockchain 
-     + login     : login into the Container 
-     + reset     : Restart Container ( Stop & Start ) 
-     + stack     : Show All Stack Version 
-     + delete    : Delete Container" 
+     + build    : Deploy & Install Enviroment to Develop using Sui Blockchain 
+     + login    : login into the Container 
+     + reset    : Restart Container ( Stop & Start ) 
+     + stack    : Show All Stack Version 
+     + delete   : Delete Container" 
 }
 
 ## ----------------------  BEGIN SETUP --------------------------
-if [ "$1" = "scratch" ]
+if [ "$1" = "setup" ]
 then
    case "$2" in 
    build)
@@ -62,20 +61,6 @@ then
           exit
 EOF
    exit
-;;
-   dockerhub)
-   docker stop suiX
-   docker rm suiX
-   docker pull docker pull mysten/sui-node:main 
-   docker run  --name suiX  -id rust tail -f /dev/null
-      docker exec -i suiX /bin/bash -s <<EOF
-          uname -a
-          apt-get -qq update                                                                                                        > /dev/null
-          apt-get -qq upgrade                                                                                                       > /dev/null
-          sleep 1
-          exit
-EOF 
-    exit   
 ;;
    login)
     docker exec -it suiX /bin/bash 
@@ -114,30 +99,6 @@ esac
 fi
 
 ## ----------------------  END SETUP ----------------------------
-
-## ----------------------  BEGIN ACCOUNT  -------------------------
-
-if [ "$1" = "account" ]
-then
-   case "$2" in
-  create)
-   echo -n "Create Suite Account"
-   docker exec -i suiX /bin/bash -s <<EOF
-   export PATH=$_path
-   sui keytool generate ed25519 
-   exit
-EOF
-exit
-;;
-   *)
-   echo_account
-   exit
-;;
-esac
-fi
-
-## ----------------------  END ACCOUNT -------------------------
-
 
 ## ----------------------  MAIN  ------------------------------
 
