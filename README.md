@@ -19,7 +19,26 @@ $ chmod +x /usr/local/bin/glyclt
 $ glyclt help
 ...
 ```
-Nota : is Mandatory running setup command to build,compile and Install all software on suiX Container. 
+
+## 2- Setup 
+
+### 2.1- Setup from Scratch
+
+```console
+$ wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.0.1/glyclt
+$ chmod +x /usr/local/bin/glyclt
+$ glyclt help
+...
+```
+
+### 2.2- Setup from Docker Hub 
+
+```console
+$ wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.0.1/glyclt
+$ chmod +x /usr/local/bin/glyclt
+$ glyclt help
+...
+```
 
 ## Sui Fundamentals
 
