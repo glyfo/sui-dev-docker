@@ -13,7 +13,7 @@ glyfclt handler communication with suiX Container to support Web3 Development.
 
 ## 1- Install 
 
-```console
+```pre
 $ wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.0.1/glyclt
 $ chmod +x /usr/local/bin/glyclt
 $ glyclt help
@@ -24,11 +24,11 @@ $ glyclt help
 
 ### 2.1- Setup from Docker Hub 
 
-```console
+```pre
 $ glyclt setup dockerhub
 $ glyclt setup stack
 ----------------------- Release  --------------------
-git			  | 2.30.2
+git.      | 2.30.2
 rustc			| 1.64.0
 cargo			| 1.64.0
 sui			  | 0.10.0
@@ -36,7 +36,7 @@ sui			  | 0.10.0
 
 ### 2.2- Setup from Scratch 
 
-```console
+```pre
 $ glyclt setup scratch
 $ glyclt setup stack
 ----------------------- Release  --------------------
@@ -48,7 +48,7 @@ sui			  | 0.10.0
 
 ## 3 - Wallet Config 
 
-```console
+```pre
 $ wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.0.1/glyclt
 $ chmod +x /usr/local/bin/glyclt
 $ glyclt help
@@ -57,7 +57,7 @@ $ glyclt help
 
 ## 4 - Program Config 
 
-```console
+```pre
 $ wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.0.1/glyclt
 $ chmod +x /usr/local/bin/glyclt
 $ glyclt help
