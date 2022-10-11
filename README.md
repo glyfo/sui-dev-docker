@@ -22,22 +22,28 @@ $ glyclt help
 
 ## 2- Setup 
 
-### 2.1- Setup from Scratch
+### 2.1- Setup from Docker Hub 
 
 ```console
-$ wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.0.1/glyclt
-$ chmod +x /usr/local/bin/glyclt
-$ glyclt help
-...
+$ glyclt setup dockerhub
+$ glyclt setup stack
+----------------------- Release  --------------------
+git			  | 2.30.2
+rustc			| 1.64.0
+cargo			| 1.64.0
+sui			  | 0.10.0
 ```
 
-### 2.2- Setup from Docker Hub 
+### 2.2- Setup from Scratch 
 
 ```console
-$ wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.0.1/glyclt
-$ chmod +x /usr/local/bin/glyclt
-$ glyclt help
-...
+$ glyclt setup scratch
+$ glyclt setup stack
+----------------------- Release  --------------------
+git			  | 2.30.2
+rustc			| 1.64.0
+cargo			| 1.64.0
+sui			  | 0.10.0
 ```
 
 ## 3 - Wallet Config 
@@ -70,6 +76,6 @@ $ glyclt help
 
 [Sui Docs](https://sui.io/)
 
-[Move Language Docs](https://move-book.com))
+[Move Language Docs](https://move-book.com)
 
 [Docker](https://docker.com)
