@@ -40,6 +40,24 @@ $ glyclt help
 ...
 ```
 
+## 3 - Wallet Config 
+
+```console
+$ wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.0.1/glyclt
+$ chmod +x /usr/local/bin/glyclt
+$ glyclt help
+...
+```
+
+## 4 - Program Config 
+
+```console
+$ wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.0.1/glyclt
+$ chmod +x /usr/local/bin/glyclt
+$ glyclt help
+...
+```
+
 ## Sui Fundamentals
 
 + Comming Soon 
