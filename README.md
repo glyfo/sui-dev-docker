@@ -28,10 +28,10 @@ $ glyclt help
 $ glyclt setup dockerhub
 $ glyclt setup stack
 ----------------------- Release  --------------------
-git.      | 2.30.2
-rustc			| 1.64.0
-cargo			| 1.64.0
-sui			  | 0.10.0
+git       | 2.30.2
+rustc     | 1.64.0
+cargo     | 1.64.0
+sui       | 0.10.0
 ```
 
 ### 2.2- Setup from Scratch 
@@ -40,10 +40,10 @@ sui			  | 0.10.0
 $ glyclt setup scratch
 $ glyclt setup stack
 ----------------------- Release  --------------------
-git			  | 2.30.2
-rustc			| 1.64.0
-cargo			| 1.64.0
-sui			  | 0.10.0
+git       | 2.30.2
+rustc     | 1.64.0
+cargo     | 1.64.0
+sui       | 0.10.0
 ```
 
 ## 3 - Wallet Config 
