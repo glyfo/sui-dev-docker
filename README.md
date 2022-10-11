@@ -25,13 +25,12 @@ Nota : is Mandatory running setup command to build,compile and Install all softw
 
 + Comming Soon 
 
-## Smart Contract Examples 
+## Move Smart Contract Examples 
 
 + Comming Soon
 
 ## Reference
 
-[Sui Docs] (https://sui.com/)
-
+[Sui Docs] (https://sui.io/)
 
 [Docker] (https://docker.com)
