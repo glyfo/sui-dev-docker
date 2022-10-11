@@ -22,10 +22,9 @@ $ glyclt help
 
 ## 2- Setup 
 
-### 2.1- Setup from Docker Hub 
-
 ```bash
-$ glyclt setup dockerhub
+$ glyclt setup status
+$ glyclt setup build
 $ glyclt setup stack
 ----------------------- Release  --------------------
 git       | 2.30.2
@@ -33,25 +32,14 @@ rustc     | 1.64.0
 cargo     | 1.64.0
 sui       | 0.10.0
 ```
-
-### 2.2- Setup from Scratch 
-
-```bash
-$ glyclt setup scratch
-$ glyclt setup stack
------------------------ Release  --------------------
-git       | 2.30.2
-rustc     | 1.64.0
-cargo     | 1.64.0
-sui       | 0.10.0
-```
-
-## 3 - Wallet Config 
+## 3 - Generate Public/Secret Key  
 
 ```bash
-$ wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.0.1/glyclt
-$ chmod +x /usr/local/bin/glyclt
-$ glyclt help
+$ glyclt setup login
+root@fc8462cf3170:/opt/sui# sui keytool generate ed25519
+"ed25519" key generated and saved to '0xd6a2fe5f4d4b11374ee49531bf000fef2c9e6548.key'
+root@fc8462cf3170:/opt/sui# exit
+exit
 ...
 ```
 
