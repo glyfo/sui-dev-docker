@@ -32,6 +32,7 @@ echo_help () {
 
 echo_setup () {
 echo "${b}+ setup${n}       : Handler Sui Node 
+     + status   : Validate if suiX is Running on Enviroment 
      + build    : Deploy & Install Enviroment to Develop using Sui Blockchain 
      + login    : login into the Container 
      + reset    : Restart Container ( Stop & Start ) 
@@ -62,9 +63,15 @@ then
 EOF
    exit
 ;;
-   login)
-    docker exec -it suiX /bin/bash 
+   status)
+    if ($( docker ps --filter status=running  --format "table {{.Names}}" | grep suiX > /dev/null )) ; then
+      echo "suiX is Running !!!"
+    fi
     exit   
+;;
+   login)
+    docker exec -it suiX /bin/bash
+    exit
 ;;
    reset)
     echo "Stop Container"
