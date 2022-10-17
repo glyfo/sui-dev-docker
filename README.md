@@ -14,7 +14,7 @@ glyfclt handler communication with suiX Container to support Web3 Development.
 ## 1- Install 
 
 ```bash
-$ wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.3.3/glyclt
+$ wget -O /usr/local/bin/glyclt wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.3.3/glyclt
 $ chmod +x /usr/local/bin/glyclt
 $ ./glyclt
  Usage:  glyclt 
