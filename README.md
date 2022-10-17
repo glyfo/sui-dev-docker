@@ -16,7 +16,7 @@ glyfclt handler communication with suiX Container to support Web3 Development.
 ```bash
 $ wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.0.1/glyclt
 $ chmod +x /usr/local/bin/glyclt
-$ glyclt
+$ ./glyclt
  Usage:  glyclt 
 + setup       : manage sui container 
      + status   : validate if suiX is running on enviroment 
@@ -26,7 +26,8 @@ $ glyclt
      + info     : show version about software stack 
      + backup   : export suiX container
      + delete   : delete container
-v0.2.1
+
+v0.3.1
 
 ...
 ```
@@ -34,7 +35,7 @@ v0.2.1
 ## 2- Setup 
 
 ```bash
-$ glyclt setup build
+$ glyclt setup build # this command building & setup container 
 $ glyclt setup stack
 ----------------------- Release  --------------------
 git       | 2.30.2
