@@ -54,7 +54,7 @@ exit
 ...
 ```
 
-## 4 - Program Config 
+## 4 - Smart Contract Building 
 
 ```bash
 COMMING SOON 
