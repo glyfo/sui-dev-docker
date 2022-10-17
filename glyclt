@@ -26,7 +26,7 @@ echo_help () {
    echo "${n} Usage: ${b} glyclt ${n}"
    echo_setup 
    echo ""
-   echo "v0.3.1"
+   echo "v0.3.3"
    exit
 }
 
