@@ -27,7 +27,7 @@ $ ./glyclt
      + backup   : export suiX container
      + delete   : delete container
 
-v0.3.1
+v0.3.3
 
 ...
 ```
