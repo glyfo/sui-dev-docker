@@ -58,16 +58,19 @@ exit
 
 ```bash
 COMMING SOON 
-...
 ```
 
 ## Sui Fundamentals
 
-+ Comming Soon 
+```bash
+COMMING SOON 
+```
 
 ## Move Smart Contract Examples 
 
-+ Comming Soon
+```bash
+COMMING SOON 
+```
 
 ## Reference
 
