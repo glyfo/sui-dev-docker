@@ -74,8 +74,14 @@ COMMING SOON
 
 ## Reference
 
+[Sui Whitepaper](https://github.com/MystenLabs/sui/blob/main/doc/paper/sui.pdf)
+
 [Sui Docs](https://sui.io/)
 
 [Move Language Docs](https://move-book.com)
 
 [Docker](https://docker.com)
+
+[Verification]https://link.springer.com/content/pdf/10.1007/978-3-030-53288-8.pdf
+
+
