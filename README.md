@@ -1,7 +1,7 @@
 
 # Glyfo Command Line Tool for Sui .
 
-glyfclt handler communication with suiX Container to support Web3 Development.
+glyclt-sui  handler communication with suiX Container to support Web3 Development.
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
@@ -14,10 +14,10 @@ glyfclt handler communication with suiX Container to support Web3 Development.
 ## 1- Install 
 
 ```bash
-$ wget -O /usr/local/bin/glyclt wget -O /usr/local/bin/glyclt https://github.com/glyfo/glyclt-sui/releases/download/v0.3.3/glyclt
-$ chmod +x /usr/local/bin/glyclt
-$ ./glyclt
- Usage:  glyclt 
+$ wget -O /usr/local/bin/glyclt-sui https://github.com/glyfo/glyclt-sui/releases/download/v0.3.3/glyclt-sui
+$ chmod +x /usr/local/bin/glyclt-sui
+$ ./glyclt-sui
+ Usage:  glyclt-sui 
 + setup       : manage sui container 
      + status   : validate if suiX is running on enviroment 
      + build    : deploy & install enviroment to develop using sui blockchain 
@@ -35,8 +35,8 @@ v0.3.3
 ## 2- Setup 
 
 ```bash
-$ glyclt setup build # this command building & setup container 
-$ glyclt setup stack
+$ glyclt-sui setup build # this command building & setup container 
+$ glyclt-sui setup stack
 ----------------------- Release  --------------------
 git       | 2.30.2
 rustc     | 1.64.0
@@ -46,7 +46,7 @@ sui       | 0.10.0
 ## 3 - Generate Public/Secret Key  
 
 ```bash
-$ glyclt setup login
+$ glyclt-sui setup login
 root@fc8462cf3170:/opt/sui# sui keytool generate ed25519
 "ed25519" key generated and saved to '0xd6a2fe5f4d4b11374ee49531bf000fef2c9e6548.key'
 root@fc8462cf3170:/opt/sui# exit
