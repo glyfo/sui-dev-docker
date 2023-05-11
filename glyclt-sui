@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #####################################################################################
-# Copyright Glyfo Company. 2022. All Rights Reserved.                               #
+# Copyright Glyfo Company. 2023. All Rights Reserved.                               #
 # Apache License, Version 2.0. See LICENSE file in the project root for details.    #
 # name    : Command Line Tool to deploy Smart Contract on Sui                       #
 # website : glyfo.com                                                               #
@@ -31,12 +31,12 @@ echo_help () {
 }
 
 echo_setup () {
-echo "${b}+ setup${n}       : manage sui container 
-     + status   : validate if suiX is running on enviroment 
-     + build    : deploy & install enviroment to develop using sui blockchain 
-     + login    : login into container 
-     + reset    : restart container ( stop & start ) 
-     + info     : show version about software stack 
+echo "${b}+ setup${n}       : manage Sui container
+     + status   : validate if suiX is running on container 
+     + build    : deploy and install the required software on container
+     + login    : login into container
+     + reset    : restart container ( stop & start )  
+     + info     : show stack installed on container
      + backup   : export suiX container
      + delete   : delete container" 
 }
