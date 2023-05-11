@@ -60,18 +60,6 @@ exit
 COMMING SOON 
 ```
 
-## Sui Fundamentals
-
-```bash
-COMMING SOON 
-```
-
-## Move Smart Contract Examples 
-
-```bash
-COMMING SOON 
-```
-
 ## Reference
 
 [Sui Whitepaper](https://github.com/MystenLabs/sui/blob/main/doc/paper/sui.pdf)
