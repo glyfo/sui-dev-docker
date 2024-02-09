@@ -1,55 +1,59 @@
+# GLYFO Command Line Tool for Sui.
 
-# Glyfo Command Line Tool for Sui .
-
-glyclt-sui  handler communication with suiX Container to support Web3 Development.
-
+gclt to support Web3 Development.
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## Prerequisite 
-
-+ Docker 
-+ wget
-+ MacOS ( x86_64 )
-
-## 1- Install 
+## Current Version 
 
 ```bash
-$ wget -O /usr/local/bin/glyclt-sui https://github.com/glyfo/glyclt-sui/releases/download/v0.3.3/glyclt-sui
-$ chmod +x /usr/local/bin/glyclt-sui
-$ ./glyclt-sui
- Usage:  glyclt-sui 
-+ setup       : manage sui container 
-     + status   : validate if suiX is running on enviroment 
-     + build    : deploy & install enviroment to develop using sui blockchain 
-     + login    : login into container 
-     + reset    : restart container ( stop & start ) 
-     + info     : show version about software stack 
-     + backup   : export suiX container
-     + delete   : delete container
++ Docker
++ Sui 
+```
+## Prerequisite 
 
++ Docker Installed
+
+## 1- Install Docker Image from Sui 
+
+This step using Docker Emscripten Image. The name of the container is dcv  ( Docker Computer Vision  ) 
+```bash
+$ docker run --name dcv -id <sui-version> tail -f /dev/null
+$ docker exec -it dcv /bin/bash
+root@90fc086bedb6:/# cd
+```
+## 1- Install Script
+
+```bash
+$ wget -O /usr/local/bin/gclt https://github.com/glyfo/glyclt-sui/releases/download/v0.3.3/gclt
+$ chmod +x /usr/local/bin/gclt
+$ ./gclt
+ Usage:  gclt 
++ setup       : develop smart contract
+     + wallet : validate if suiX is running on enviroment 
+     + build  : deploy & install enviroment to develop using sui blockchain 
+     + info   : show version about software stack 
+     + stack  : export suiX container
 v0.3.3
-
 ...
 ```
 
-## 2- Setup 
+## 2- Validate Stack  
 
 ```bash
-$ glyclt-sui setup build # this command building & setup container 
-$ glyclt-sui setup stack
+$ gclt setup build # this command building & setup container 
+$ gclt stack
 ----------------------- Release  --------------------
 git       | 2.30.2
 rustc     | 1.64.0
 cargo     | 1.64.0
 sui       | 0.10.0
 ```
-## 3 - Generate Public/Secret Key  
+## 3 - Generate Wallet (Public/Secret Key)  
 
 ```bash
-$ glyclt-sui setup login
+$ gclt wallet
 root@fc8462cf3170:/opt/sui# sui keytool generate ed25519
 "ed25519" key generated and saved to '0xd6a2fe5f4d4b11374ee49531bf000fef2c9e6548.key'
-root@fc8462cf3170:/opt/sui# exit
 exit
 ...
 ```
