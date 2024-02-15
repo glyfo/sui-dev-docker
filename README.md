@@ -19,25 +19,13 @@ This step using Docker Emscripten Image. The name of the container is dcv  ( Doc
 ```bash
 $ docker run -d --name suib -p 127.0.0.1:9000:9000 -id  mysten/sui-tools:devnet
 $ docker exec -it suib /bin/bash
-root@78362416c8aa:/sui# 
-```
-## 1- Install Script
+root@78362416c8aa:/sui# apt-get -qq update
+root@78362416c8aa:/sui# apt-get -qq upgrade
+root@78362416c8aa:/sui# apt-get -y install wget
+root@78362416c8aa:/sui# wget -O /usr/local/bin/gclt https://github.com/glyfo/glyclt-sui/releases/download/v0.3.5/gclt
 
-```bash
-$ wget -O /usr/local/bin/gclt https://github.com/glyfo/glyclt-sui/releases/download/v0.3.3/gclt
-$ chmod +x /usr/local/bin/gclt
-$ ./gclt
- Usage:  gclt 
-+ setup       : develop smart contract
-     + wallet : validate if suiX is running on enviroment 
-     + build  : deploy & install enviroment to develop using sui blockchain 
-     + info   : show version about software stack 
-     + stack  : export suiX container
-v0.3.3
-...
 ```
-
-## 2- Validate Stack  
+## 2- Command Guideline 
 
 ```bash
 $ gclt setup build # this command building & setup container 
