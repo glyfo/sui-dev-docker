@@ -46,13 +46,13 @@ Note : This command use a sui keytool generate ed25519 command.
 ## 4 - Generate  Account B 
 
 ```bash
-$ gclt wallet
+$ gclt accounts
 ...
 
 ## 4 - Transfer SUI from A to B Account 
 
 ```bash
-$ gclt transfer A B
+$ gclt transfer A B 500
 ...
 
 
