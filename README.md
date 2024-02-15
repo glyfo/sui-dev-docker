@@ -1,6 +1,6 @@
 # GLYFO Command Line Tool for Sui.
 
-gclt to support Web3 Development.
+gclt to support Sui Development.
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Current Version 
@@ -25,10 +25,9 @@ root@78362416c8aa:/sui# apt-get -y install wget
 root@78362416c8aa:/sui# wget -O /usr/local/bin/gclt https://github.com/glyfo/glyclt-sui/releases/download/v0.3.5/gclt
 
 ```
-## 2- Command Guideline 
+## 2- Check Current Stack
 
 ```bash
-$ gclt setup build # this command building & setup container 
 $ gclt stack
 ----------------------- Release  --------------------
 git       | 2.30.2
@@ -36,21 +35,27 @@ rustc     | 1.64.0
 cargo     | 1.64.0
 sui       | 0.10.0
 ```
-## 3 - Generate Wallet (Public/Secret Key)  
+## 3 - Generate Account A 
 
 ```bash
-$ gclt wallet
-root@fc8462cf3170:/opt/sui# sui keytool generate ed25519
-"ed25519" key generated and saved to '0xd6a2fe5f4d4b11374ee49531bf000fef2c9e6548.key'
-exit
+$ gclt wallet A
 ...
 ```
 
-## 4 - Smart Contract Building 
+Note : This command use a sui keytool generate ed25519 command. 
+
+## 4 - Generate  Account B 
 
 ```bash
-COMMING SOON 
-```
+$ gclt wallet A
+...
+
+## 4 - Transfer SUI from A to B Account 
+
+```bash
+$ gclt transfer A B
+...
+
 
 ## Reference
 
