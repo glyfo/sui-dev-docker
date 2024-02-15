@@ -17,8 +17,8 @@ gclt to support Web3 Development.
 
 This step using Docker Emscripten Image. The name of the container is dcv  ( Docker Computer Vision  ) 
 ```bash
-$ docker run --name dcv -id <sui-version> tail -f /dev/null
-$ docker exec -it dcv /bin/bash
+$ docker run -d --name suib -p 127.0.0.1:9000:9000 -id  mysten/sui-tools:devnet
+$ docker exec -it suib /bin/bash
 root@90fc086bedb6:/# cd
 ```
 ## 1- Install Script
