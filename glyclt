@@ -32,59 +32,24 @@ echo_help () {
 
 echo_setup () {
 echo "${b}+ setup${n}       : manage Sui container
-     + status   : validate if suiX is running on container 
-     + build    : deploy and install the required software on container
-     + login    : login into container
-     + reset    : restart container ( stop & start )  
-     + info     : show stack installed on container
-     + backup   : export suiX container
-     + delete   : delete container" 
+     + wallet   : Genera Wallet A & B 
+     + transfer : Deploy and install the required software on container
+     + stack    : Current Stack  
 }
 
 ## ----------------------  BEGIN SETUP --------------------------
-if [ "$1" = "setup" ]
-then
-   case "$2" in 
-   build)
-   docker stop suiX
-   docker rm suiX
-   docker pull docker pull mysten/sui-node:main 
-   docker run  --name suiX  -id rust tail -f /dev/null
-   docker exec -i suiX /bin/bash -s <<EOF
-          uname -a
-          apt-get -qq update                                                                                                        > /dev/null
-          apt-get -qq upgrade                                                                                                       > /dev/null
-          apt-get -qq install -y cmake libssl-dev libclang-dev net-tools --no-install-recommends apt-utils                          > /dev/null
-          rustup update stable                                                                                                      > /dev/null
-          export PATH=$_path
-          cargo install --locked --git https://github.com/MystenLabs/sui.git --branch "devnet" sui sui-gateway                      > /dev/null
-          echo '----------------------- Building Sui ----------------------------'
-          sleep 1
-          exit
-EOF
+   case "$1" in 
+   wallet)
+      cd sui
+      mkdir A
+      cd B 
+      sui keytool generate ed25519 word18  > /dev/null
+      cd ..
+      mkdir B
+      cd B
+      sui keytool generate ed25519 word18  > /dev/null
+      sui keytool show                                                                                            
    exit
-;;
-   status)
-    if ($( docker ps --filter status=running  --format "table {{.Names}}" | grep suiX > /dev/null )) ; then
-      echo "suiX is Running !!!"
-    fi
-    exit   
-;;
-   login)
-    docker exec -it suiX /bin/bash
-    exit
-;;
-   backup)
-    docker export suiX > suiX.tar
-    exit
-;;
-   reset)
-    echo "Stop Container"
-    docker stop  $(docker ps -a |grep suiX |awk '{ print $1 }' )
-    echo "Start Container"
-    docker start $(docker ps -a |grep suiX |awk '{ print $1 }' )
-    exit
-;;
    delete)
     echo "Delete Container Enviroment"
     docker stop suiX

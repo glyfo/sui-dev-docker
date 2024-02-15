@@ -35,19 +35,18 @@ rustc     | 1.64.0
 cargo     | 1.64.0
 sui       | 0.10.0
 ```
-## 3 - Generate Account A 
+## 3 - Generate Account A & B 
 
 ```bash
 $ gclt wallet A
 ...
 ```
-
 Note : This command use a sui keytool generate ed25519 command. 
 
 ## 4 - Generate  Account B 
 
 ```bash
-$ gclt wallet A
+$ gclt wallet
 ...
 
 ## 4 - Transfer SUI from A to B Account 
