@@ -19,7 +19,7 @@ This step using Docker Emscripten Image. The name of the container is dcv  ( Doc
 ```bash
 $ docker run -d --name suib -p 127.0.0.1:9000:9000 -id  mysten/sui-tools:devnet
 $ docker exec -it suib /bin/bash
-root@90fc086bedb6:/# cd
+root@78362416c8aa:/sui# 
 ```
 ## 1- Install Script
 
