@@ -18,7 +18,7 @@ gclt to support Sui Development.
 This step using Docker Emscripten Image. The name of the container is dcv  ( Docker Computer Vision  ) 
 ```bash
 $ docker run -d --name suidev -p 127.0.0.1:9000:9000 -id  mysten/sui-tools:devnet
-$ docker exec -it suib /bin/bash
+$ docker exec -it suidev /bin/bash
 root@78362416c8aa:/sui# apt-get -qq update
 root@78362416c8aa:/sui# apt-get -qq upgrade
 root@78362416c8aa:/sui# apt-get -y install wget
