@@ -19,6 +19,7 @@ This step using Docker Emscripten Image. The name of the container is dcv  ( Doc
 ```bash
 $ docker run -d --name suidev -p 127.0.0.1:9000:9000 -id  mysten/sui-tools:devnet
 $ docker exec -it suidev bash
+
 ```
 
 Note: Delete the container image use the below command : 
