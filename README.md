@@ -56,7 +56,8 @@ We choose the local configuration on Sui Explorer and connected it to a local Su
 ## 5 - Sui Active Address 
 
 Within the environment, there is an active address configured with 5 SUI Object COIN. 
-Each of these objects is endowed with 30M, resulting in a cumulative total of 150M in the account.
+Each of these objects is endowed with 30M, resulting in a cumulative total of 150M in the account. 
+The total amount is split in 5 objects.
 
 ```bash
 root@7a2c0a32cd76:/sui# sui client active-address
@@ -78,15 +79,27 @@ root@7a2c0a32cd76:/sui#
 root@cad0e8705e91:/sui# sui keytool generate ed25519 word18
 Created new keypair for address wrote to file path "0xcaab851abb53582d95bdcdb46e48e597cca849a1e4b007e478b4368718ccd5b8.key" with scheme ED25519: [0xcaab851abb53582d95bdcdb46e48e597cca849a1e4b007e478b4368718ccd5b8]
 Secret Recovery Phrase : [label enforce vague adjust ball lava helmet hunt damage drill option observe spike essay clown baby insane doctor]
+root@cad0e8705e91:/sui# sui client objects 0xcaab851abb53582d95bdcdb46e48e597cca849a1e4b007e478b4368718ccd5b8 2>/dev/null
+ sui client objects 0xcaab851abb53582d95bdcdb46e48e597cca849a1e4b007e478b4368718ccd5b8 2>/dev/null
+                 Object ID                  |  Version   |                    Digest                    |   Owner Type    |               Object Type
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Showing 0 results.
 ```
 
-## 6 - Transfer SUI from Active 
+## 6 - Transfer SUI from Active to New Account
+
+This operation transfer a object from Active Account to New Account. 
 
 ```bash
-root@cad0e8705e91:/sui# sui keytool generate ed25519 word18
-Created new keypair for address wrote to file path "0xcaab851abb53582d95bdcdb46e48e597cca849a1e4b007e478b4368718ccd5b8.key" with scheme ED25519: [0xcaab851abb53582d95bdcdb46e48e597cca849a1e4b007e478b4368718ccd5b8]
-Secret Recovery Phrase : [label enforce vague adjust ball lava helmet hunt damage drill option observe spike essay clown baby insane doctor]
+root@cad0e8705e91:/sui# sui client transfer --to 0xcaab851abb53582d95bdcdb46e48e597cca849a1e4b007e478b4368718ccd5b8 --object-id  0x42e64f8fd907c374b9282213b7b79d1cbfb2d6b95a2c2a822cc093e4297e6b30 --gas-budget 3000000 2> /dev/null
+sui client objects 0xcaab851abb53582d95bdcdb46e48e597cca849a1e4b007e478b4368718ccd5b8 2>/dev/null
+                 Object ID                  |  Version   |                    Digest                    |   Owner Type    |               Object Type
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 0x42e64f8fd907c374b9282213b7b79d1cbfb2d6b95a2c2a822cc093e4297e6b30 |     2      | Xept2720dEuT4x/OnRGo1VdIIzGhGjY6/27M2zl2il8= |  AddressOwner   |  Some(Struct(MoveObjectType(GasCoin)))
+Showing 1 results.
 ```
+
+ More detail : https://medium.com/p/68c07aebb1cb
 
 ## Reference
 
@@ -97,6 +110,8 @@ Secret Recovery Phrase : [label enforce vague adjust ball lava helmet hunt damag
 [Move Language Docs](https://move-book.com)
 
 [Medium Blog Resource](https://medium.com/coinmonks/web3-environment-using-sui-blockchain-and-docker-a8d31a9b1fe5)
+
+[Medium Blog Resource](https://medium.com/coinmonks/sui-explorer-on-local-sui-blockchain-b60fb2c0053e)
 
 [Docker](https://docker.com)
 
