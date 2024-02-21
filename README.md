@@ -21,9 +21,6 @@ $ docker run -d --name suidev -p 127.0.0.1:9000:9000 -id  mysten/sui-tools:devne
 $ docker exec -it suidev /bin/bash
 root@78362416c8aa:/sui# apt-get -qq update
 root@78362416c8aa:/sui# apt-get -qq upgrade
-root@78362416c8aa:/sui# apt-get -y install wget
-root@78362416c8aa:/sui# wget -O /usr/local/bin/gclt https://github.com/glyfo/glyclt-sui/releases/download/v0.3.5/gclt
-
 ```
 
 Note: Delete the container image use the below command : 
