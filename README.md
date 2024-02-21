@@ -26,38 +26,22 @@ root@78362416c8aa:/sui# apt-get -qq upgrade
 Note: Delete the container image use the below command : 
 
 ```bash
-$docker remove suidev
+$docker stop suidev ; docker remove suidev
+```
+## 2 - Generate Account A & B 
+
+```bash
+$  mkdir A; cd A; sui keytool generate ed25519 word18 ;cd ..
+$  mkdir B; cd B; sui keytool generate ed25519 word18 ;cd ..
 ```
 
-## 2- Check Current Stack
+## 4 - Validate the account A & B
 
 ```bash
-$ gclt stack
------------------------ Release  --------------------
-git       | 2.30.2
-rustc     | 1.64.0
-cargo     | 1.64.0
-sui       | 0.10.0
-```
-## 3 - Generate Account A & B 
-
-```bash
-$ gclt wallet A
+$  mkdir A; cd A; sui keytool generate ed25519 word18 ;cd ..
+$  mkdir B; cd B; sui keytool generate ed25519 word18 ;cd ..
 ...
 ```
-Note : This command use a sui keytool generate ed25519 command. 
-
-## 4 - Generate  Account B 
-
-```bash
-$ gclt accounts
-...
-
-## 4 - Transfer SUI from A to B Account 
-
-```bash
-$ gclt transfer A B 500
-...
 
 
 ## Reference
