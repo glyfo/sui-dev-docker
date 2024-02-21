@@ -22,7 +22,7 @@ $ docker run -d --name suidev -p 127.0.0.1:9000:9000 -id  mysten/sui-tools:devne
 ```
 
 > [!CAUTION]
-> Note: Delete the container 
+> Note: Delete the container use the below command:
 
  `$docker stop suidev ; docker remove suidev` 
 
