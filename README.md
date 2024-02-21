@@ -19,6 +19,7 @@ This step using Docker Emscripten Image. The name of the container is dcv  ( Doc
 ```bash
 $ docker run -d --name suidev -p 127.0.0.1:9000:9000 -id  mysten/sui-tools:devnet
 
+
 ```
 
 > [!CAUTION]
@@ -26,24 +27,40 @@ $ docker run -d --name suidev -p 127.0.0.1:9000:9000 -id  mysten/sui-tools:devne
 
  `$docker stop suidev ; docker remove suidev` 
 
-## 2 - Access to Sui Docker Enviroment
+## 2 - Access to Local Sui Blockchain Enviroment
 
 ```bash
-docker exec -it suidev bash
-
+$ docker exec -it suidev bash
+root@cad0e8705e91:/sui#
 ```
 
-## 3 - Start Local Sui Blockchain Enviroment
+## 3 - Start Local Blockchain 
 
 ```bash
-...
+root@cad0e8705e91:/sui# nohup sui start  > sui-node.out 2>&1 &
+root@cad0e8705e91:/sui# sui client envs
+localnet => http://0.0.0.0:9000 (active)
+devnet => https://fullnode.devnet.sui.io:443
 ```
 
-## 4 - Using Sui Explorer to connect a Local Enviroment 
+## 4 - Sui Explorer to connect a Local Enviroment 
+
+Open your browser and establish a connection with the local Sui Blockchain environment by accessing Sui Explorer. 
+Within Sui Explorer, you'll find four distinct options for connecting to a Sui Blockchain: https://suiexplorer.com/
+
++ Mainnet
++ Testnet
++ Devnet
++ Local
+  
+We choose the local configuration on Sui Explorer and connected it to a local Sui Blockchain.
+
+## 5 - Validate a New Account 
+
+Using sui cli command to create a new account on Sui Blockchain 
 
 ```bash
-
-...
+root@cad0e8705e91:/sui# 
 ```
 
 ## Reference
