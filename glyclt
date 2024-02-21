@@ -50,13 +50,6 @@ echo "${b}+ setup${n}       : manage Sui container
       sui keytool generate ed25519 word18  > /dev/null
       cd ..
       sui keytool show                                                                                          
-   exit
-   delete)
-    echo "Delete Container Enviroment"
-    docker stop suiX
-    docker rm suiX
-    exit
-;;
    info)
     docker exec -i suiX /bin/bash -s <<EOF
     export PATH=$_path
