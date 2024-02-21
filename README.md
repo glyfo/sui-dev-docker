@@ -1,4 +1,4 @@
-# Develop on Sui using Docker 
+# Develop on Sui Blockchain using Local Docker Enviroment
 
 This is a guideline to explaint step by step how develop Smart Contract using Sui Blockchain on Docker.
 
