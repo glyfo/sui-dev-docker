@@ -60,7 +60,7 @@ We choose the local configuration on Sui Explorer and connected it to a local Su
 Using sui cli command to create a new account on Sui Blockchain 
 
 ```bash
-root@cad0e8705e91:/sui# 
+root@cad0e8705e91:/sui# sui keytool generate ed25519 word18 
 ```
 
 ## Reference
