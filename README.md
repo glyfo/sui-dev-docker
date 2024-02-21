@@ -77,5 +77,5 @@ root@cad0e8705e91:/sui# sui keytool generate ed25519 word18
 
 [Verification](https://link.springer.com/content/pdf/10.1007/978-3-030-53288-8.pdf)
 
-[Keytool] (https://docs.sui.io/references/cli/keytool)
+[Keytool](https://docs.sui.io/references/cli/keytool)
 
