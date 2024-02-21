@@ -1,19 +1,19 @@
-# Develop on Sui Blockchain using Local Docker Enviroment
+### Develop on Sui Blockchain using Local Docker Enviroment
 
 This is a guideline to explaint step by step how develop Smart Contract using Sui Blockchain on Docker.
 
-## Current Version 
+#### Current Version 
 
 ```bash
 + Docker
 + Sui
 + VC 
 ```
-## Prerequisite 
+#### Prerequisite 
 
 + Docker Installed
 
-## 1- Install Docker Image from Sui 
+#### Install Docker Image from Sui 
 
 This step using Docker Emscripten Image. The name of the container is dcv  ( Docker Computer Vision  ) 
 ```bash
@@ -25,14 +25,14 @@ $ docker run -d --name suidev -p 127.0.0.1:9000:9000 -id  mysten/sui-tools:devne
 
  `$docker stop suidev ; docker remove suidev` 
 
-## 2 - Access to Local Sui Blockchain Enviroment
+#### Access to Local Sui Blockchain Enviroment
 
 ```bash
 $ docker exec -it suidev bash
 root@cad0e8705e91:/sui#
 ```
 
-## 3 - Start Local Blockchain 
+#### Start Local Blockchain 
 
 ```bash
 root@cad0e8705e91:/sui# nohup sui start  > sui-node.out 2>&1 &
@@ -41,7 +41,7 @@ localnet => http://0.0.0.0:9000 (active)
 devnet => https://fullnode.devnet.sui.io:443
 ```
 
-## 4 - Sui Explorer to connect a Local Enviroment 
+#### Sui Explorer to connect a Local Enviroment 
 
 Open your browser and establish a connection with the local Sui Blockchain environment by accessing Sui Explorer. 
 Within Sui Explorer, you'll find four distinct options for connecting to a Sui Blockchain: https://suiexplorer.com/
@@ -53,7 +53,7 @@ Within Sui Explorer, you'll find four distinct options for connecting to a Sui B
   
 We choose the local configuration on Sui Explorer and connected it to a local Sui Blockchain.
 
-## 5 - Sui Active Address 
+#### Sui Active Address 
 
 Within the environment, there is an active address configured with 5 SUI Object COIN. 
 Each of these objects is endowed with 30M, resulting in a cumulative total of 150M in the account. 
@@ -73,7 +73,7 @@ root@7a2c0a32cd76:/sui# sui client objects 0xfc5421865d7a315a513a7fe2faec119af5f
 Showing 5 results.
 root@7a2c0a32cd76:/sui#
 ```
-## 6 - Create a new Account
+#### Create a new Account
 
 ```bash
 root@cad0e8705e91:/sui# sui keytool generate ed25519 word18
@@ -86,7 +86,7 @@ root@cad0e8705e91:/sui# sui client objects 0xcaab851abb53582d95bdcdb46e48e597cca
 Showing 0 results.
 ```
 
-## 6 - Transfer SUI from Active to New Account
+#### Transfer SUI from Active to New Account
 
 This operation transfer a object from Active Account to New Account. 
 
@@ -101,7 +101,7 @@ Showing 1 results.
 
  More detail : https://medium.com/p/68c07aebb1cb
 
-## Reference
+#### Reference
 
 [Sui Whitepaper](https://github.com/MystenLabs/sui/blob/main/doc/paper/sui.pdf)
 
