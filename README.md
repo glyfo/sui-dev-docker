@@ -75,6 +75,8 @@ root@7a2c0a32cd76:/sui#
 ```
 #### Create a new Account
 
+The below command generate a new account using ed25519 
+
 ```bash
 root@cad0e8705e91:/sui# sui keytool generate ed25519 word18
 Created new keypair for address wrote to file path "0xcaab851abb53582d95bdcdb46e48e597cca849a1e4b007e478b4368718ccd5b8.key" with scheme ED25519: [0xcaab851abb53582d95bdcdb46e48e597cca849a1e4b007e478b4368718ccd5b8]
