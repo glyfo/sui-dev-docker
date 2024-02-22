@@ -56,9 +56,8 @@ We choose the local configuration on Sui Explorer and connected it to a local Su
 
 #### Sui Active Address 
 
-Within the environment, there is an active address configured with 5 SUI Object COIN. 
-Each of these objects is endowed with 30M, resulting in a cumulative total of 150M in the account. 
-The total amount is split in 5 objects.
+Within the environment, there is an active address configured with 5 SUI Object Coin. 
+Each of these objects is endowed with 30M, resulting in a cumulative total of 150M (30x5). 
 
 ```bash
 root@7a2c0a32cd76:/sui# sui client active-address
@@ -101,9 +100,6 @@ Showing 1 results.
 ```
 
  More detail : https://medium.com/p/68c07aebb1cb
-
-
-
 
 
 
