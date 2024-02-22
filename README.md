@@ -1,6 +1,6 @@
 ### Develop on Sui Blockchain using Local Docker Enviroment
 
-This is a guideline to explaint step by step how develop Smart Contract using Sui Blockchain on Docker.
+This is a  step by step guideline how develop Smart Contract using Sui Blockchain on Docker.
 
 #### Current Version 
 
@@ -15,24 +15,25 @@ This is a guideline to explaint step by step how develop Smart Contract using Su
 
 #### Install Docker Image from Sui 
 
-This step using Docker Emscripten Image. The name of the container is dcv  ( Docker Computer Vision  ) 
+This step using Docker Image. The name of the container is suidev  ( Sui Development ) 
 ```bash
 $ docker run -d --name suidev -p 127.0.0.1:9000:9000 -id  mysten/sui-tools:devnet
 ```
 
 > [!CAUTION]
-> Note: Delete the container use the below command:
+> Note: By following these steps, you can cleanly stop and remove the current container.
 
  `$docker stop suidev ; docker remove suidev` 
 
-#### Access to Local Sui Blockchain Enviroment
-
+#### Access to Sui Container
 ```bash
 $ docker exec -it suidev bash
 root@cad0e8705e91:/sui#
 ```
+> [!NOTE]
+> Note: The container has a sui tool installed
 
-#### Start Local Blockchain 
+#### Start Local Node Blockchain 
 
 ```bash
 root@cad0e8705e91:/sui# nohup sui start  > sui-node.out 2>&1 &
